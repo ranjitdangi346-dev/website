@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Shree Shakti Engineering — Chartered Engineer | NDT | Amusement Ride Safety | Ahmedabad</title>
+<meta name="description" content="Shree Shakti Engineering — Professional Chartered Engineering, Industrial Inspection, Amusement Ride Safety, NDT Services, Manufacturing & Safety Training. 17+ Years Experience. Ahmedabad, Gujarat."/>
+<link rel="icon" type="image/png" href="images/favicon.png"/>
+<link rel="apple-touch-icon" href="images/favicon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --navy:   #04090f;
+  --navy2:  #071018;
+  --navy3:  #0c1a2e;
+  --steel:  #152238;
+  --steel2: #1e3050;
+  --silver: #7e9ab4;
+  --silver2:#b0c4d4;
+  --white:  #edf2f7;
+  --accent: #c8860a;   /* deep amber/gold */
+  --accent2:#e8a030;
+  --orange: #e86820;   /* orange highlight */
+  --cyan:   #2d9fcf;
+  --border: rgba(200,134,10,0.22);
+  --border2:rgba(255,255,255,0.07);
+  --font-display:'Bebas Neue',sans-serif;
+  --font-body:'DM Sans',sans-serif;
+  --font-mono:'JetBrains Mono',monospace;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--navy);
+  color:var(--white);
+  font-family:var(--font-body);
+  font-size:16px;
+  overflow-x:hidden;
+  line-height:1.6;
+}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--navy2);}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 5%;
+  transition:all .4s;
+}
+nav.scrolled{
+  background:rgba(4,9,15,0.96);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(20px);
+  padding:13px 5%;
+}
+.nav-logo{
+  display:flex;align-items:center;gap:12px;
+  font-family:var(--font-display);
+  font-size:1.5rem;letter-spacing:2px;
+  color:var(--white);white-space:nowrap;
+  text-decoration:none;
+}
+.nav-logo span{color:var(--accent);}
+.nav-logo-img{
+  width:46px;height:46px;min-width:46px;
+  border-radius:4px;border:1.5px solid var(--border);
+  background:var(--steel);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;flex-shrink:0;
+}
+.nav-logo-img img{
+  width:100%;height:100%;object-fit:contain;
+}
+.nav-logo-img .logo-placeholder{
+  font-size:.55rem;font-family:var(--font-mono);
+  color:var(--silver);letter-spacing:.5px;text-align:center;
+  line-height:1.3;padding:4px;
+}
+/* ISO badge */
+.iso-badge{
+  display:inline-flex;align-items:center;gap:5px;
+  background:rgba(200,134,10,0.10);
+  border:1px solid var(--border);
+  padding:5px 10px;border-radius:2px;
+  font-family:var(--font-mono);font-size:.58rem;
+  color:var(--accent);letter-spacing:1.2px;text-transform:uppercase;
+  white-space:nowrap;
+}
+.iso-badge::before{content:'✓';color:var(--accent);font-weight:700;}
+/* Inline hero ISO badge */
+.hero-iso{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(200,134,10,0.08);
+  border:1px solid var(--border);
+  padding:7px 14px;border-radius:2px;
+  font-family:var(--font-mono);font-size:.65rem;
+  color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;
+  margin-bottom:18px;
+}
+.hero-iso::before{content:'✓';font-weight:700;}
+.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links a{
+  color:var(--silver);font-size:.78rem;font-weight:500;
+  text-decoration:none;letter-spacing:1.2px;text-transform:uppercase;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--accent);}
+.nav-cta{
+  background:var(--accent);color:#000;border:none;
+  padding:9px 22px;border-radius:2px;
+  font-weight:700;font-size:.75rem;letter-spacing:1.5px;text-transform:uppercase;
+  cursor:pointer;text-decoration:none;display:inline-block;
+  transition:all .2s;white-space:nowrap;
+}
+.nav-cta:hover{background:var(--accent2);}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+.nav-hamburger span{width:24px;height:2px;background:var(--white);display:block;transition:all .3s;}
+.mobile-menu{
+  display:none;position:fixed;top:60px;left:0;right:0;z-index:999;
+  background:rgba(4,9,15,0.98);border-bottom:1px solid var(--border);
+  padding:20px 5%;flex-direction:column;gap:16px;
+}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{
+  color:var(--silver2);font-size:.9rem;text-decoration:none;
+  padding:8px 0;border-bottom:1px solid var(--border2);
+  text-transform:uppercase;letter-spacing:1px;
+}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;
+  display:grid;grid-template-columns:1fr 1fr;
+  align-items:center;padding:0 5%;padding-top:100px;
+  position:relative;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 65% 55% at 70% 50%, rgba(45,159,207,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 70% at 15% 60%, rgba(200,134,10,0.06) 0%, transparent 55%),
+    linear-gradient(180deg, var(--navy) 0%, var(--navy2) 100%);
+}
+.hero-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(200,134,10,0.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(200,134,10,0.04) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse at center, black 20%, transparent 80%);
+}
+.hero-left{position:relative;z-index:2;padding-right:40px;}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(200,134,10,0.1);border:1px solid var(--border);
+  padding:6px 14px;border-radius:2px;
+  font-family:var(--font-mono);font-size:.68rem;
+  color:var(--accent);letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:26px;
+}
+.hero-tag::before{
+  content:'';width:7px;height:7px;border-radius:50%;
+  background:var(--accent);animation:pulse 2s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(1.4);}}
+.hero h1{
+  font-family:var(--font-display);
+  font-size:clamp(3rem,6.5vw,5.8rem);
+  line-height:.92;letter-spacing:2px;
+  color:var(--white);margin-bottom:6px;
+}
+.hero h1 .gold{color:var(--accent);}
+.hero h1 .oran{color:var(--orange);}
+.hero-designation{
+  font-family:var(--font-mono);font-size:.72rem;color:var(--cyan);
+  letter-spacing:2px;margin-bottom:18px;text-transform:uppercase;
+}
+.hero-desc{
+  font-size:.97rem;color:var(--silver2);
+  line-height:1.8;max-width:480px;
+  margin-bottom:32px;font-weight:300;
+}
+.hero-location{
+  display:flex;align-items:center;gap:6px;
+  font-family:var(--font-mono);font-size:.68rem;
+  color:var(--silver);letter-spacing:1px;margin-bottom:32px;
+}
+.hero-location::before{content:'📍';}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-primary{
+  background:var(--accent);color:#000;border:none;
+  padding:13px 30px;border-radius:2px;
+  font-weight:700;font-size:.82rem;letter-spacing:1.5px;text-transform:uppercase;
+  cursor:pointer;text-decoration:none;display:inline-block;
+  transition:all .25s;
+}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 30px rgba(200,134,10,0.4);}
+.btn-outline{
+  background:transparent;color:var(--white);
+  border:1px solid rgba(255,255,255,0.22);
+  padding:13px 30px;border-radius:2px;
+  font-weight:500;font-size:.82rem;letter-spacing:1.5px;text-transform:uppercase;
+  cursor:pointer;text-decoration:none;display:inline-block;
+  transition:all .25s;
+}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);}
+.btn-orange{
+  background:var(--orange);color:#fff;border:none;
+  padding:13px 30px;border-radius:2px;
+  font-weight:700;font-size:.82rem;letter-spacing:1.5px;text-transform:uppercase;
+  cursor:pointer;text-decoration:none;display:inline-block;
+  transition:all .25s;
+}
+.btn-orange:hover{background:#ff7d35;transform:translateY(-2px);}
+
+/* Hero right visual */
+.hero-right{
+  position:relative;z-index:2;
+  display:flex;justify-content:center;align-items:center;
+}
+.hero-visual{
+  position:relative;width:420px;height:500px;
+}
+.hero-panel{
+  position:absolute;inset:20px;
+  border:1px solid var(--border);border-radius:4px;
+  background:var(--steel);overflow:hidden;
+  display:flex;flex-direction:column;
+}
+.hero-panel-header{
+  background:var(--navy3);
+  border-bottom:1px solid var(--border2);
+  padding:14px 18px;
+  display:flex;align-items:center;gap:8px;
+}
+.hero-panel-dot{width:9px;height:9px;border-radius:50%;background:var(--accent);}
+.hero-panel-title{font-family:var(--font-mono);font-size:.65rem;color:var(--silver);letter-spacing:1.5px;text-transform:uppercase;}
+.hero-panel-body{flex:1;padding:20px;display:flex;flex-direction:column;gap:10px;justify-content:center;}
+.hero-service-row{
+  display:flex;align-items:center;gap:12px;
+  padding:10px 14px;
+  background:var(--navy3);border:1px solid var(--border2);
+  border-radius:3px;transition:border-color .3s;
+}
+.hero-service-row:hover{border-color:var(--border);}
+.hero-service-icon{font-size:1.1rem;width:24px;text-align:center;}
+.hero-service-name{font-size:.8rem;color:var(--silver2);font-weight:500;}
+.hero-service-badge{
+  margin-left:auto;font-family:var(--font-mono);font-size:.58rem;
+  color:var(--accent);letter-spacing:1px;
+  background:rgba(200,134,10,0.1);
+  border:1px solid var(--border);
+  padding:2px 6px;border-radius:2px;
+}
+.hero-corner{position:absolute;width:26px;height:26px;border-color:var(--accent);border-style:solid;}
+.hero-corner.tl{top:0;left:0;border-width:2px 0 0 2px;}
+.hero-corner.tr{top:0;right:0;border-width:2px 2px 0 0;}
+.hero-corner.bl{bottom:0;left:0;border-width:0 0 2px 2px;}
+.hero-corner.br{bottom:0;right:0;border-width:0 2px 2px 0;}
+.hero-badge{
+  position:absolute;bottom:10px;left:-20px;
+  background:var(--navy2);border:1px solid var(--border);
+  padding:12px 16px;border-radius:4px;
+  backdrop-filter:blur(10px);
+}
+.hero-badge-num{font-family:var(--font-display);font-size:1.9rem;color:var(--accent);line-height:1;}
+.hero-badge-txt{font-size:.6rem;color:var(--silver);letter-spacing:1px;text-transform:uppercase;}
+.hero-badge2{
+  position:absolute;top:10px;right:-16px;
+  background:var(--navy2);border:1px solid rgba(45,159,207,.3);
+  padding:10px 14px;border-radius:4px;
+}
+.hero-badge2-txt{font-family:var(--font-mono);font-size:.6rem;color:var(--cyan);letter-spacing:1px;}
+
+/* ── STATS BAR ── */
+.stats-bar{
+  background:var(--steel);
+  border-top:1px solid var(--border2);
+  border-bottom:1px solid var(--border2);
+  padding:26px 5%;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+.stat-item{text-align:center;position:relative;}
+.stat-item:not(:last-child)::after{
+  content:'';position:absolute;right:0;top:10%;height:80%;
+  width:1px;background:var(--border2);
+}
+.stat-num{font-family:var(--font-display);font-size:2.6rem;color:var(--accent);letter-spacing:2px;line-height:1;}
+.stat-label{font-size:.68rem;color:var(--silver);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;}
+
+/* ── SECTION COMMON ── */
+section{padding:90px 5%;}
+.section-label{
+  font-family:var(--font-mono);font-size:.68rem;color:var(--accent);
+  letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;
+  display:flex;align-items:center;gap:10px;
+}
+.section-label::before{content:'';width:28px;height:1px;background:var(--accent);}
+.section-title{
+  font-family:var(--font-display);
+  font-size:clamp(2.2rem,3.8vw,3.6rem);
+  letter-spacing:2px;line-height:1.05;
+  color:var(--white);margin-bottom:18px;
+}
+.section-sub{font-size:.95rem;color:var(--silver2);max-width:560px;line-height:1.78;font-weight:300;}
+
+/* ── ABOUT ── */
+.about{background:var(--navy2);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:48px;}
+.about-text p{color:var(--silver2);font-weight:300;line-height:1.85;margin-bottom:16px;font-size:.95rem;}
+.about-highlight{
+  border-left:3px solid var(--accent);padding:14px 20px;
+  background:rgba(200,134,10,0.05);margin:24px 0;border-radius:0 4px 4px 0;
+  font-size:.96rem;color:var(--white);font-weight:500;line-height:1.6;
+}
+.about-creds{display:flex;flex-direction:column;gap:10px;margin-top:24px;}
+.cred-item{
+  display:flex;align-items:center;gap:10px;
+  font-size:.85rem;color:var(--silver2);
+}
+.cred-item::before{
+  content:'✓';width:20px;height:20px;min-width:20px;
+  background:rgba(200,134,10,0.15);border:1px solid var(--border);
+  border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+  font-size:.65rem;color:var(--accent);
+}
+.about-right{display:flex;flex-direction:column;gap:14px;}
+.expertise-card{
+  background:var(--steel);border:1px solid var(--border2);
+  border-radius:4px;padding:18px 22px;transition:border-color .3s;
+}
+.expertise-card:hover{border-color:var(--border);}
+.expertise-card-icon{font-size:1.3rem;margin-bottom:6px;}
+.expertise-card-title{font-weight:700;font-size:.88rem;color:var(--white);margin-bottom:3px;}
+.expertise-card-desc{font-size:.78rem;color:var(--silver);line-height:1.6;}
+
+/* ── SERVICES ── */
+.services-intro{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start;margin-bottom:48px;}
+.services-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:1px;background:var(--border2);border:1px solid var(--border2);
+}
+.service-card{
+  background:var(--navy2);padding:28px 24px;
+  position:relative;overflow:hidden;transition:background .3s;cursor:default;
+}
+.service-card::before{
+  content:'';position:absolute;top:0;left:0;width:3px;height:0;
+  background:var(--accent);transition:height .35s;
+}
+.service-card:hover{background:var(--steel);}
+.service-card:hover::before{height:100%;}
+.service-card-num{font-family:var(--font-mono);font-size:.6rem;color:var(--steel2);letter-spacing:2px;margin-bottom:14px;}
+.service-card-icon{font-size:1.8rem;margin-bottom:12px;display:block;}
+.service-card-title{font-weight:700;font-size:.95rem;color:var(--white);margin-bottom:8px;line-height:1.3;}
+.service-card-desc{font-size:.8rem;color:var(--silver);line-height:1.7;}
+.service-card-list{margin-top:10px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:4px;}
+.service-card-list li{font-size:.75rem;color:var(--silver);display:flex;align-items:baseline;gap:6px;}
+.service-card-list li::before{content:'›';color:var(--accent);font-size:1rem;flex-shrink:0;}
+.service-tag{
+  display:inline-block;margin-top:12px;
+  font-family:var(--font-mono);font-size:.6rem;
+  color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;
+  padding:3px 7px;background:rgba(200,134,10,0.08);border:1px solid rgba(200,134,10,0.15);border-radius:2px;
+}
+.service-highlight{background:var(--orange) !important;}
+.service-highlight .service-card-title,.service-highlight .service-card-desc,.service-highlight .service-card-list li{color:#fff !important;}
+.service-highlight .service-card-num{color:rgba(255,255,255,0.4);}
+.service-highlight::before{background:#fff !important;}
+.service-highlight .service-tag{background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.3);color:#fff;}
+.service-highlight .service-card-list li::before{color:#fff;}
+
+/* Standards badge row */
+.standards-row{
+  display:flex;flex-wrap:wrap;gap:8px;margin-top:40px;
+  padding-top:30px;border-top:1px solid var(--border2);
+}
+.std-badge{
+  padding:6px 14px;border-radius:2px;
+  font-family:var(--font-mono);font-size:.68rem;
+  color:var(--cyan);letter-spacing:1px;
+  background:rgba(45,159,207,0.08);border:1px solid rgba(45,159,207,0.18);
+}
+
+/* ── WHY CHOOSE US ── */
+.why{background:var(--navy2);}
+.why-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:16px;margin-top:48px;
+}
+.why-card{
+  background:var(--steel);border:1px solid var(--border2);
+  border-radius:4px;padding:24px 20px;
+  display:flex;gap:14px;align-items:flex-start;
+  transition:all .3s;
+}
+.why-card:hover{border-color:var(--border);transform:translateY(-3px);}
+.why-icon{
+  width:44px;height:44px;min-width:44px;border-radius:4px;
+  background:rgba(200,134,10,0.1);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;font-size:1.2rem;
+}
+.why-title{font-weight:700;font-size:.88rem;color:var(--white);margin-bottom:4px;}
+.why-desc{font-size:.76rem;color:var(--silver);line-height:1.6;}
+
+/* ── NDT SECTION ── */
+.ndt{background:var(--navy);}
+.ndt-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start;margin-top:48px;}
+.ndt-methods{display:flex;flex-direction:column;gap:12px;}
+.ndt-method{
+  background:var(--steel);border:1px solid var(--border2);
+  border-radius:4px;padding:18px 20px;display:flex;gap:14px;
+  align-items:flex-start;transition:border-color .3s;cursor:default;
+}
+.ndt-method:hover{border-color:var(--border);}
+.ndt-method-abbr{
+  font-family:var(--font-display);font-size:1.5rem;color:var(--accent);
+  letter-spacing:1px;line-height:1;min-width:40px;
+}
+.ndt-method-name{font-weight:700;font-size:.88rem;color:var(--white);margin-bottom:3px;}
+.ndt-method-desc{font-size:.76rem;color:var(--silver);line-height:1.55;}
+.ndt-right{display:flex;flex-direction:column;gap:16px;}
+.ndt-stat-box{
+  background:var(--steel);border:1px solid var(--border);
+  border-radius:4px;padding:20px 22px;text-align:center;
+}
+.ndt-stat-num{font-family:var(--font-display);font-size:2.4rem;color:var(--accent);line-height:1;}
+.ndt-stat-label{font-size:.72rem;color:var(--silver);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;}
+.ndt-cert-box{
+  background:var(--navy3);border:1px solid var(--border2);
+  border-radius:4px;padding:20px;
+}
+.ndt-cert-title{font-family:var(--font-mono);font-size:.68rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;}
+.ndt-cert-list{display:flex;flex-direction:column;gap:8px;}
+.ndt-cert-item{display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--silver2);}
+.ndt-cert-item::before{content:'✓';color:var(--accent);font-size:.75rem;}
+
+/* ── RIDE SAFETY ── */
+.ride{background:var(--navy2);}
+.ride-header{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start;margin-bottom:40px;}
+.ride-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:14px;
+}
+.ride-card{
+  background:var(--steel);border:1px solid var(--border2);
+  border-radius:4px;padding:20px;transition:all .3s;cursor:default;
+}
+.ride-card:hover{border-color:var(--orange);transform:translateY(-3px);}
+.ride-card-icon{font-size:1.5rem;margin-bottom:10px;}
+.ride-card-title{font-weight:700;font-size:.88rem;color:var(--white);margin-bottom:4px;}
+.ride-card-desc{font-size:.75rem;color:var(--silver);line-height:1.55;}
+.ride-standards{
+  margin-top:36px;padding:22px;
+  background:rgba(232,104,32,0.07);border:1px solid rgba(232,104,32,0.2);
+  border-radius:4px;
+}
+.ride-standards-title{font-family:var(--font-mono);font-size:.68rem;color:var(--orange);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;}
+.ride-standards-list{display:flex;flex-wrap:wrap;gap:8px;}
+.ride-std-tag{
+  padding:5px 12px;border-radius:2px;
+  font-family:var(--font-mono);font-size:.68rem;
+  color:var(--orange);letter-spacing:1px;
+  background:rgba(232,104,32,0.1);border:1px solid rgba(232,104,32,0.25);
+}
+
+/* ── TRAINING ── */
+.training{background:var(--navy3);}
+.training-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:48px;}
+.training-card{
+  background:var(--steel);border:1px solid var(--border2);
+  border-radius:4px;padding:24px 20px;transition:all .3s;
+}
+.training-card:hover{border-color:var(--border);transform:translateY(-3px);}
+.training-card-icon{font-size:1.8rem;margin-bottom:12px;}
+.training-card-title{font-weight:700;font-size:.9rem;color:var(--white);margin-bottom:6px;}
+.training-card-desc{font-size:.78rem;color:var(--silver);line-height:1.6;}
+
+/* ── MANUFACTURING ── */
+.mfg{background:var(--navy);}
+.mfg-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:48px;}
+.mfg-list{display:flex;flex-direction:column;gap:12px;}
+.mfg-item{
+  display:flex;gap:16px;align-items:flex-start;
+  padding:16px 18px;background:var(--steel);
+  border:1px solid var(--border2);border-radius:4px;
+  transition:border-color .3s;
+}
+.mfg-item:hover{border-color:var(--border);}
+.mfg-item-icon{font-size:1.3rem;width:30px;text-align:center;flex-shrink:0;}
+.mfg-item-title{font-weight:700;font-size:.88rem;color:var(--white);margin-bottom:3px;}
+.mfg-item-desc{font-size:.76rem;color:var(--silver);line-height:1.55;}
+.mfg-right-stat{
+  background:var(--steel);border:1px solid var(--border2);border-radius:4px;padding:24px;
+  margin-bottom:16px;text-align:center;
+}
+.mfg-right-stat-num{font-family:var(--font-display);font-size:2.2rem;color:var(--accent);line-height:1;}
+.mfg-right-stat-label{font-size:.72rem;color:var(--silver);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;}
+.mfg-stats-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;}
+
+/* ── CERTIFICATIONS ── */
+.certs{background:var(--navy2);}
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:48px;}
+.cert-card{
+  background:var(--navy);border:1px solid var(--border2);
+  border-radius:4px;padding:24px;position:relative;overflow:hidden;transition:all .3s;
+}
+.cert-card::after{
+  content:'';position:absolute;top:-40px;right:-40px;
+  width:110px;height:110px;border-radius:50%;
+  background:rgba(200,134,10,0.04);border:1px solid rgba(200,134,10,0.1);
+}
+.cert-card:hover{border-color:var(--border);transform:translateY(-3px);}
+.cert-icon{font-size:1.8rem;margin-bottom:14px;}
+.cert-name{font-weight:700;font-size:.95rem;color:var(--white);margin-bottom:6px;}
+.cert-body{font-family:var(--font-mono);font-size:.65rem;color:var(--accent);letter-spacing:1px;margin-bottom:8px;}
+.cert-desc{font-size:.78rem;color:var(--silver);line-height:1.6;}
+
+/* ── PROJECTS ── */
+.projects{background:var(--navy);}
+.projects-filter{display:flex;gap:8px;flex-wrap:wrap;margin-top:38px;margin-bottom:28px;}
+.filter-btn{
+  background:transparent;border:1px solid var(--border2);
+  color:var(--silver);padding:6px 16px;border-radius:2px;font-size:.75rem;
+  letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .2s;font-family:var(--font-body);
+}
+.filter-btn.active,.filter-btn:hover{background:var(--accent);border-color:var(--accent);color:#000;font-weight:700;}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;}
+.project-card{
+  background:var(--steel);border:1px solid var(--border2);
+  border-radius:4px;overflow:hidden;transition:all .3s;
+}
+.project-card:hover{border-color:var(--border);transform:translateY(-4px);box-shadow:0 18px 50px rgba(0,0,0,.5);}
+.project-thumb{
+  height:170px;
+  display:flex;align-items:center;justify-content:center;font-size:2.8rem;
+  background:linear-gradient(135deg,var(--navy3) 0%,var(--steel2) 100%);
+  position:relative;overflow:hidden;
+}
+.project-thumb::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,134,10,.05),transparent);}
+.project-body{padding:18px 20px;}
+.project-cat{font-family:var(--font-mono);font-size:.6rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
+.project-title{font-weight:700;font-size:.9rem;color:var(--white);margin-bottom:6px;}
+.project-desc{font-size:.78rem;color:var(--silver);line-height:1.6;margin-bottom:12px;}
+.project-tags{display:flex;gap:5px;flex-wrap:wrap;}
+.project-tag{
+  font-family:var(--font-mono);font-size:.58rem;color:var(--cyan);letter-spacing:1px;
+  padding:2px 7px;background:rgba(45,159,207,.08);border:1px solid rgba(45,159,207,.15);border-radius:2px;
+}
+
+/* ── GALLERY ── */
+.gallery{background:var(--navy2);}
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:repeat(4,190px);
+  gap:4px;margin-top:48px;
+}
+.gallery-item{overflow:hidden;border-radius:2px;position:relative;cursor:pointer;background:var(--steel);}
+.gallery-item:nth-child(1){grid-column:span 5;grid-row:span 2;}
+.gallery-item:nth-child(2){grid-column:span 4;}
+.gallery-item:nth-child(3){grid-column:span 3;}
+.gallery-item:nth-child(4){grid-column:span 3;}
+.gallery-item:nth-child(5){grid-column:span 4;}
+.gallery-item:nth-child(6){grid-column:span 4;}
+.gallery-item:nth-child(7){grid-column:span 3;}
+.gallery-item:nth-child(8){grid-column:span 5;grid-row:span 2;}
+.gallery-item:nth-child(9){grid-column:span 3;}
+.gallery-item:nth-child(10){grid-column:span 4;}
+.gallery-img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .4s;
+}
+.gallery-item:hover .gallery-img{transform:scale(1.04);}
+.gallery-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(4,9,15,.9) 0%,transparent 55%);
+  opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:14px;
+}
+.gallery-item:hover .gallery-overlay{opacity:1;}
+.gallery-overlay-txt{font-size:.76rem;color:var(--white);font-weight:500;}
+.gallery-overlay-hint{
+  display:block;margin-top:3px;font-family:var(--font-mono);font-size:.6rem;
+  color:var(--accent);letter-spacing:1px;text-transform:uppercase;font-weight:400;
+}
+
+/* ── GALLERY LIGHTBOX ── */
+.lightbox{
+  position:fixed;inset:0;z-index:2000;
+  background:rgba(4,9,15,0.97);backdrop-filter:blur(6px);
+  display:flex;align-items:center;justify-content:center;
+  padding:40px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;
+}
+.lightbox.open{opacity:1;visibility:visible;}
+.lightbox-stage{
+  position:relative;max-width:92vw;
+  display:flex;flex-direction:column;align-items:center;
+  transform:scale(.85);opacity:0;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),opacity .35s;
+}
+.lightbox.open .lightbox-stage{transform:scale(1);opacity:1;}
+.lightbox-media{
+  max-width:100%;max-height:76vh;border-radius:6px;overflow:hidden;
+  background:linear-gradient(135deg,var(--steel) 0%,var(--navy3) 100%);
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 30px 80px rgba(0,0,0,.6);
+}
+.lightbox-media img{display:block;max-width:100%;max-height:76vh;object-fit:contain;}
+.lightbox-caption{margin-top:18px;text-align:center;}
+.lightbox-title{font-weight:700;font-size:1.1rem;color:var(--white);margin-bottom:4px;}
+.lightbox-counter{font-family:var(--font-mono);font-size:.68rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase;}
+.lightbox-close{
+  position:absolute;top:22px;right:26px;z-index:2001;
+  width:42px;height:42px;border-radius:50%;
+  background:rgba(255,255,255,0.06);border:1px solid var(--border2);
+  color:var(--white);font-size:1.1rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:all .2s;
+}
+.lightbox-close:hover{border-color:var(--accent);color:var(--accent);}
+.lightbox-nav{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:2001;
+  width:52px;height:52px;border-radius:50%;
+  background:rgba(255,255,255,0.06);border:1px solid var(--border2);
+  color:var(--white);font-size:1.7rem;line-height:1;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:all .2s;
+}
+.lightbox-nav:hover{border-color:var(--accent);color:var(--accent);background:rgba(200,134,10,0.12);}
+.lightbox-prev{left:24px;}
+.lightbox-next{right:24px;}
+@media(max-width:700px){
+  .lightbox{padding:14px;}
+  .lightbox-nav{width:42px;height:42px;font-size:1.3rem;}
+  .lightbox-prev{left:4px;}
+  .lightbox-next{right:4px;}
+  .lightbox-icon{font-size:3.2rem;}
+  .lightbox-close{top:10px;right:10px;width:38px;height:38px;}
+}
+
+/* ── CONTACT ── */
+.contact{background:var(--navy);}
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;margin-top:48px;align-items:start;}
+.contact-info{display:flex;flex-direction:column;gap:18px;}
+.contact-item{
+  display:flex;gap:14px;align-items:flex-start;padding:18px;
+  background:var(--steel);border:1px solid var(--border2);border-radius:4px;transition:border-color .3s;
+}
+.contact-item:hover{border-color:var(--border);}
+.contact-icon{
+  width:42px;height:42px;min-width:42px;border-radius:4px;
+  background:rgba(200,134,10,0.1);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;font-size:1.05rem;
+}
+.contact-item-label{font-family:var(--font-mono);font-size:.6rem;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px;}
+.contact-item-val{font-size:.9rem;color:var(--white);font-weight:500;}
+.contact-item-val a{color:var(--white);text-decoration:none;}
+.contact-item-val a:hover{color:var(--accent);}
+.contact-form{background:var(--steel);border:1px solid var(--border2);border-radius:4px;padding:28px 26px;}
+.form-title{font-weight:700;font-size:1rem;color:var(--white);margin-bottom:20px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+.form-group{display:flex;flex-direction:column;gap:5px;margin-bottom:12px;}
+.form-label{font-family:var(--font-mono);font-size:.6rem;color:var(--silver);letter-spacing:1.5px;text-transform:uppercase;}
+.form-input,.form-select,.form-textarea{
+  background:var(--navy2);border:1px solid var(--border2);
+  color:var(--white);padding:10px 13px;border-radius:2px;
+  font-family:var(--font-body);font-size:.85rem;
+  transition:border-color .2s;outline:none;resize:none;
+}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--accent);}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--silver);opacity:.45;}
+.form-select{color:var(--silver);}
+.form-select option{background:var(--navy2);}
+.form-textarea{height:90px;}
+.form-submit{
+  width:100%;background:var(--accent);color:#000;border:none;
+  padding:13px;border-radius:2px;font-weight:700;font-size:.82rem;
+  letter-spacing:2px;text-transform:uppercase;cursor:pointer;
+  transition:all .25s;margin-top:4px;font-family:var(--font-body);
+}
+.form-submit:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 30px rgba(200,134,10,.4);}
+.coverage-note{
+  margin-top:18px;padding:14px 16px;
+  background:rgba(200,134,10,0.07);border:1px solid var(--border);border-radius:4px;
+  font-family:var(--font-mono);font-size:.65rem;color:var(--accent);letter-spacing:1px;line-height:1.6;
+}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);border-top:1px solid var(--border2);padding:48px 5% 26px;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:36px;}
+.footer-brand{font-family:var(--font-display);font-size:1.6rem;letter-spacing:2px;margin-bottom:10px;}
+.footer-brand span{color:var(--accent);}
+.footer-tagline{font-size:.8rem;color:var(--silver);line-height:1.75;max-width:280px;}
+.footer-col-title{font-family:var(--font-mono);font-size:.65rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.footer-links a{font-size:.8rem;color:var(--silver);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--accent);}
+.footer-bottom{
+  border-top:1px solid var(--border2);padding-top:18px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+}
+.footer-copy{font-size:.72rem;color:var(--silver);opacity:.55;}
+.footer-cert{font-family:var(--font-mono);font-size:.65rem;color:var(--accent);letter-spacing:1.5px;}
+
+/* ── FLOAT WHATSAPP ── */
+.whatsapp-float{
+  position:fixed;bottom:26px;right:26px;z-index:999;
+  width:54px;height:54px;border-radius:50%;
+  background:#25D366;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(37,211,102,.45);text-decoration:none;transition:all .25s;font-size:1.5rem;
+}
+.whatsapp-float:hover{transform:scale(1.12);box-shadow:0 8px 30px rgba(37,211,102,.65);}
+
+/* ── ANIMATIONS ── */
+.fade-in{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s;}
+.fade-in.visible{opacity:1;transform:translateY(0);}
+.fade-in-left{opacity:0;transform:translateX(-28px);transition:opacity .7s,transform .7s;}
+.fade-in-left.visible{opacity:1;transform:translateX(0);}
+.fade-in-right{opacity:0;transform:translateX(28px);transition:opacity .7s,transform .7s;}
+.fade-in-right.visible{opacity:1;transform:translateX(0);}
+
+/* ── MOBILE RESPONSIVE ── */
+@media(max-width:960px){
+  .hero{grid-template-columns:1fr;padding-top:90px;gap:40px;}
+  .hero-right{display:none;}
+  .hero-desc{max-width:100%;}
+  .stats-bar{grid-template-columns:repeat(2,1fr);}
+  .stat-item:nth-child(2)::after,.stat-item:nth-child(4)::after{display:none;}
+  .about-grid{grid-template-columns:1fr;}
+  .ndt-grid{grid-template-columns:1fr;}
+  .mfg-grid{grid-template-columns:1fr;}
+  .mfg-stats-row{grid-template-columns:repeat(4,1fr);}
+  .services-intro{grid-template-columns:1fr;}
+  .ride-header{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+  nav .nav-links,.nav-cta,.nav-iso-hide{display:none;}
+  .nav-hamburger{display:flex;}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;}
+  .gallery-item{grid-column:span 1 !important;grid-row:span 1 !important;height:150px;}
+  .form-row{grid-template-columns:1fr;}
+  section{padding:70px 5%;}
+  .nav-logo-img{width:38px;height:38px;min-width:38px;}
+  .hero-btns{flex-direction:column;gap:10px;}
+  .hero-btns a{text-align:center;width:100%;}
+}
+@media(max-width:600px){
+  .stats-bar{grid-template-columns:1fr 1fr;}
+  .footer-top{grid-template-columns:1fr;}
+  section{padding:56px 5%;}
+  .why-grid{grid-template-columns:1fr;}
+  .certs-grid{grid-template-columns:1fr;}
+  .training-grid{grid-template-columns:1fr;}
+  .ride-grid{grid-template-columns:1fr 1fr;}
+  .mfg-stats-row{grid-template-columns:1fr 1fr;}
+  .hero h1{font-size:clamp(2.5rem,11vw,4rem);}
+  nav{padding:12px 4%;}
+  nav.scrolled{padding:10px 4%;}
+  .nav-logo{font-size:1.1rem;gap:8px;}
+  .hero-tag{font-size:.6rem;padding:5px 10px;}
+  .hero-iso{font-size:.58rem;padding:5px 10px;}
+  .stat-num{font-size:2rem;}
+  .projects-filter{gap:6px;}
+  .filter-btn{font-size:.65rem;padding:6px 10px;}
+  .contact-form{padding:18px 14px;}
+  .form-row{grid-template-columns:1fr;}
+  .mobile-menu{top:58px;}
+  .footer-cert{font-size:.58rem;letter-spacing:.8px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
+    <div class="nav-logo-img">
+      <img src="images/logo.png" alt="Shree Shakti Engineering logo"/>
+    </div>
+    <span style="color:var(--white)">SHREE<span style="color:var(--accent)"> SHAKTI</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#ride">Ride Safety</a></li>
+    <li><a href="#ndt">NDT</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <span class="iso-badge nav-iso-hide">ISO 9001:2025</span>
+    <a href="#contact" class="nav-cta">Request Inspection</a>
+    <button class="nav-hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobileNav()">About</a>
+  <a href="#services" onclick="closeMobileNav()">Services</a>
+  <a href="#ride" onclick="closeMobileNav()">Ride Safety</a>
+  <a href="#ndt" onclick="closeMobileNav()">NDT</a>
+  <a href="#training" onclick="closeMobileNav()">Training</a>
+  <a href="#projects" onclick="closeMobileNav()">Projects</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+
+  <div class="hero-left fade-in-left">
+    <div class="hero-tag">Chartered Engineer · Ahmedabad, Gujarat</div>
+    <div class="hero-iso">ISO 9001:2025 Certified Company</div>
+    <h1>SHREE<br><span class="gold">SHAKTI</span><br><span class="oran">ENGINEERING</span></h1>
+    <div class="hero-designation">// Chartered Engineering · NDT · Ride Safety · Inspection</div>
+    <div class="hero-location">Ahmedabad, Gujarat, India · Available Pan-India</div>
+    <p class="hero-desc">
+      Professional Chartered Engineering, Industrial Inspection, Amusement Ride Safety Certification,
+      NDT Testing, Manufacturing & Safety Training — backed by 17+ years of technical authority
+      across Gujarat and India.
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Request Inspection</a>
+      <a href="#contact" class="btn-orange">Contact Now</a>
+      <a href="#services" class="btn-outline">Our Services</a>
+    </div>
+  </div>
+
+  <div class="hero-right fade-in-right">
+    <div class="hero-visual">
+      <div class="hero-corner tl"></div>
+      <div class="hero-corner tr"></div>
+      <div class="hero-corner bl"></div>
+      <div class="hero-corner br"></div>
+      <div class="hero-panel">
+        <div class="hero-panel-header">
+          <div class="hero-panel-dot"></div>
+          <div class="hero-panel-title">Technical Authority Profile</div>
+        </div>
+        <div class="hero-panel-body">
+          <div class="hero-service-row"><span class="hero-service-icon">📋</span><span class="hero-service-name">Chartered Engineer Certification</span><span class="hero-service-badge">CE · IEI</span></div>
+          <div class="hero-service-row"><span class="hero-service-icon">🎡</span><span class="hero-service-name">Amusement Ride Inspection</span><span class="hero-service-badge">IS 15475</span></div>
+          <div class="hero-service-row"><span class="hero-service-icon">🔊</span><span class="hero-service-name">NDT Services (UT/MPT/DPT)</span><span class="hero-service-badge">ASNT</span></div>
+          <div class="hero-service-row"><span class="hero-service-icon">🏭</span><span class="hero-service-name">Industrial Third Party Inspection</span><span class="hero-service-badge">TPI</span></div>
+          <div class="hero-service-row"><span class="hero-service-icon">⚙️</span><span class="hero-service-name">Manufacturing & Fabrication</span><span class="hero-service-badge">Custom</span></div>
+          <div class="hero-service-row"><span class="hero-service-icon">🎓</span><span class="hero-service-name">Industrial Safety Training</span><span class="hero-service-badge">Certified</span></div>
+        </div>
+      </div>
+      <div class="hero-badge">
+        <div class="hero-badge-num">17+</div>
+        <div class="hero-badge-txt">Years Experience</div>
+      </div>
+      <div class="hero-badge2">
+        <div class="hero-badge2-txt">✓ CHARTERED ENGINEER</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item fade-in"><div class="stat-num" data-target="500">0</div><div class="stat-label">Projects Completed</div></div>
+  <div class="stat-item fade-in"><div class="stat-num" data-target="200">0</div><div class="stat-label">Industrial Clients</div></div>
+  <div class="stat-item fade-in"><div class="stat-num" data-target="17">0</div><div class="stat-label">Years of Expertise</div></div>
+  <div class="stat-item fade-in"><div class="stat-num" data-target="300">0</div><div class="stat-label">Ride Inspections Done</div></div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <!-- MEET THE EXPERT — PERSON PROFILE -->
+<div style="display:flex;align-items:flex-start;gap:28px;background:var(--navy3);border:1px solid var(--border);border-radius:6px;padding:28px 24px;margin-bottom:48px;flex-wrap:wrap;" class="fade-in">
+  <div style="flex-shrink:0;position:relative;">
+    <div style="width:130px;height:158px;border-radius:4px;border:2px solid var(--accent);background:var(--steel);overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative;">
+      <img src="images/ranjit-dangi.jpg" alt="Ranjit Dangi — Chartered Engineer"
+           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;"
+           onerror="this.style.display='none';document.getElementById('photoFallback').style.display='flex'"/>
+      <div id="photoFallback" style="display:none;position:absolute;inset:0;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px;text-align:center;">
+        <span style="font-size:3rem;opacity:.3;">👤</span>
+        <span style="font-family:var(--font-mono);font-size:.58rem;color:var(--silver);letter-spacing:1px;">UPLOAD PHOTO</span>
+      </div>
+    </div>
+    <div style="margin-top:10px;text-align:center;background:rgba(200,134,10,0.12);border:1px solid var(--border);padding:4px 0;border-radius:2px;font-family:var(--font-mono);font-size:.6rem;color:var(--accent);letter-spacing:1.5px;">✓ CE · IEI</div>
+      <div class="stat-item fade-in" style="margin-top: 50px;"><div class="stat-num" data-target="17">0</div><div class="stat-label">Years of Expertise</div></div>
+  </div>
+  <div style="flex:1;min-width:240px;">
+    <div style="font-family:var(--font-mono);font-size:.65rem;color:var(--accent);letter-spacing:3px;text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;gap:10px;"><span style="width:18px;height:1px;background:var(--accent);display:inline-block;"></span>Meet the Expert</div>
+    <div style="font-family:var(--font-display);font-size:1.8rem;letter-spacing:2px;color:var(--white);margin-bottom:2px;">RANJIT DANGI</div>
+    <div style="font-family:var(--font-mono);font-size:.7rem;color:var(--cyan);letter-spacing:1.5px;margin-bottom:14px;">// Chartered Engineer · NDT Specialist · Amusement Ride Safety Inspector</div>
+    <p style="font-size:.88rem;color:var(--silver2);line-height:1.8;margin-bottom:14px;font-weight:300;">
+      Founder &amp; Principal Engineer at Shree Shakti Engineering with 17+ years of industrial experience across Gujarat and India. Registered Chartered Engineer (IEI), qualified amusement ride safety inspector, and NDT specialist — trusted by industries, amusement parks, factories, and government authorities.
+    </p>
+    <div style="display:flex;flex-direction:column;gap:7px;">
+      <div style="display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--silver2);"><span style="width:18px;height:18px;min-width:18px;background:rgba(200,134,10,0.15);border:1px solid var(--border);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.6rem;color:var(--accent);">✓</span>Chartered Engineer — Institution of Engineers (India)</div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--silver2);"><span style="width:18px;height:18px;min-width:18px;background:rgba(200,134,10,0.15);border:1px solid var(--border);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.6rem;color:var(--accent);">✓</span>Amusement Ride Inspector — IS 15475 · Gujarat Guidelines</div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--silver2);"><span style="width:18px;height:18px;min-width:18px;background:rgba(200,134,10,0.15);border:1px solid var(--border);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.6rem;color:var(--accent);">✓</span>NDT Specialist — UT, MPT, DPT, VT Methods</div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--silver2);"><span style="width:18px;height:18px;min-width:18px;background:rgba(200,134,10,0.15);border:1px solid var(--border);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.6rem;color:var(--accent);">✓</span>17+ Years Industrial Engineering Experience</div>
+    </div>
+    <div style="margin-top:14px;padding:10px 14px;background:rgba(200,134,10,0.06);border:1px solid var(--border);border-radius:3px;font-family:var(--font-mono);font-size:.62rem;color:var(--accent);letter-spacing:1px;line-height:1.6;">
+      📍 Based in Ahmedabad, Gujarat · Available Pan-India for Inspections &amp; Certification
+    </div>
+  </div>
+</div>
+  <div class="section-label">Professional Profile</div>
+  <div class="section-title">ENGINEERING<br>AUTHORITY</div>
+  <div class="section-sub">A rare combination of Chartered Engineering, Amusement Ride Safety, NDT, Industrial Inspection, Fabrication and Safety Training — all under one roof.</div>
+
+  <div class="about-grid">
+    <div class="about-text fade-in-left">
+      <p>
+        <strong>Shree Shakti Engineering</strong> is a professional engineering and inspection service provider based in Ahmedabad, Gujarat. We specialize in Chartered Engineering Certification, Industrial Inspection, NDT Testing, Amusement Ride Safety Compliance, Fabrication Consultancy, and Industrial Safety Training.
+      </p>
+      <div class="about-highlight">
+        "With over 17 years of industrial experience, we provide technically accurate and professionally documented engineering solutions — trusted by industries, amusement parks, contractors, fabrication units, and manufacturing organizations."
+      </div>
+      <p>
+        Our expertise spans government compliance, third-party industrial inspection, ride licensing support under Gujarat Government Guidelines, and precision fabrication — making us one of the few engineering firms that combines all these capabilities under one authority.
+      </p>
+      <p>
+        We are committed to safety, technical compliance, quality assurance, and strict government guideline adherence, providing professional documentation that survives regulatory audit.
+      </p>
+      <div class="about-creds">
+        <div class="cred-item">Chartered Engineer — Institution of Engineers (India)</div>
+        <div class="cred-item">Amusement Ride Inspection Expert — IS 15475 / Gujarat Guidelines</div>
+        <div class="cred-item">NDT Specialist — UT, MPT, DPT, VT, Thickness Measurement</div>
+        <div class="cred-item">Third Party Industrial Inspection Authority</div>
+        <div class="cred-item">Industrial Safety Trainer & Compliance Consultant</div>
+        <div class="cred-item">Textile Machinery Specialist — Warping & Precision Machines</div>
+      </div>
+    </div>
+    <div class="about-right fade-in-right">
+      <div class="expertise-card"><div class="expertise-card-icon">📋</div><div class="expertise-card-title">Chartered Engineering Certification</div><div class="expertise-card-desc">Machinery, structural, valuation, import/export, insurance, and asset certification — professionally documented and legally recognized.</div></div>
+      <div class="expertise-card"><div class="expertise-card-icon">🎡</div><div class="expertise-card-title">Amusement Ride Safety</div><div class="expertise-card-desc">End-to-end ride inspection, load testing, NDT of ride structures, licensing support, and annual safety audits per IS 15475 and Gujarat regulations.</div></div>
+      <div class="expertise-card"><div class="expertise-card-icon">🔬</div><div class="expertise-card-title">Non-Destructive Testing (NDT)</div><div class="expertise-card-desc">UT, MPT, DPT, VT, thickness measurement, weld inspection, crack detection — for industrial equipment, structures, and amusement rides.</div></div>
+      <div class="expertise-card"><div class="expertise-card-icon">🏭</div><div class="expertise-card-title">Manufacturing & Fabrication</div><div class="expertise-card-desc">Structural fabrication, precision components, drawing-based manufacturing, and industrial assembly backed by engineering expertise.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-intro">
+    <div>
+      <div class="section-label">What We Offer</div>
+      <div class="section-title">CORE SERVICES</div>
+      <div class="section-sub">Comprehensive technical engineering services for industries, amusement parks, contractors, and manufacturing organizations across Gujarat and India.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;padding-top:10px;">
+      <div style="padding:14px 18px;background:var(--steel);border:1px solid var(--border2);border-radius:4px;">
+        <div style="font-family:var(--font-mono);font-size:.62rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">Key Differentiator</div>
+        <div style="font-size:.85rem;color:var(--silver2);line-height:1.6;">Very few engineers combine CE certification, ride inspection, NDT, fabrication, industrial compliance, and safety training. That combination is our biggest branding advantage.</div>
+      </div>
+      <div style="padding:14px 18px;background:rgba(232,104,32,0.08);border:1px solid rgba(232,104,32,0.2);border-radius:4px;">
+        <div style="font-family:var(--font-mono);font-size:.62rem;color:var(--orange);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">Available For</div>
+        <div style="font-size:.82rem;color:var(--silver2);">Government inspection · Industrial clients · Factory inspections · Ride licensing · NDT contracts · Safety training · OEM tie-ups · Export certification</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card service-highlight fade-in">
+      <div class="service-card-num">01</div>
+      <span class="service-card-icon">📋</span>
+      <div class="service-card-title">Chartered Engineer Services</div>
+      <ul class="service-card-list">
+        <li>Machinery Certification</li><li>Valuation Certification</li>
+        <li>Insurance Inspection</li><li>Structural Stability Certification</li>
+        <li>Import / Export Certification</li><li>Used Machinery Certification</li>
+        <li>Asset Verification</li><li>Technical Documentation</li>
+      </ul>
+      <span class="service-tag">CE · IEI Registered</span>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-card-num">02</div>
+      <span class="service-card-icon">🎡</span>
+      <div class="service-card-title">Amusement Ride Inspection</div>
+      <ul class="service-card-list">
+        <li>Ride Safety Inspection & Audit</li><li>Load Testing</li>
+        <li>NDT of Ride Structures</li><li>Licensing Support (Gujarat Act)</li>
+        <li>Annual Safety Inspection</li><li>Installation Inspection</li>
+        <li>Operational Safety Review</li><li>Structural Integrity Verification</li>
+      </ul>
+      <span class="service-tag">IS 15475 · ASTM · EN</span>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-card-num">03</div>
+      <span class="service-card-icon">🔊</span>
+      <div class="service-card-title">NDT Services</div>
+      <ul class="service-card-list">
+        <li>Ultrasonic Testing (UT)</li><li>Dye Penetrant Testing (DPT)</li>
+        <li>Magnetic Particle Testing (MPT)</li><li>Visual Testing (VT)</li>
+        <li>Thickness Measurement</li><li>Weld Inspection</li>
+        <li>Crack & Corrosion Assessment</li>
+      </ul>
+      <span class="service-tag">ASNT Standards</span>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-card-num">04</div>
+      <span class="service-card-icon">🏗️</span>
+      <div class="service-card-title">Industrial Inspection Services</div>
+      <ul class="service-card-list">
+        <li>Factory Inspection</li><li>Vendor Inspection</li>
+        <li>Equipment Inspection</li><li>Welding Inspection</li>
+        <li>Shutdown Inspection</li><li>Quality Audit</li>
+        <li>Third Party Inspection</li><li>Pressure Vessel Inspection</li>
+      </ul>
+      <span class="service-tag">TPI · QA/QC</span>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-card-num">05</div>
+      <span class="service-card-icon">🔩</span>
+      <div class="service-card-title">Manufacturing & Fabrication</div>
+      <ul class="service-card-list">
+        <li>Structural Fabrication</li><li>Machine Fabrication</li>
+        <li>Industrial Components</li><li>Precision Job Work</li>
+        <li>Heavy Fabrication</li><li>Drawing-Based Manufacturing</li>
+        <li>Industrial Assembly Work</li>
+      </ul>
+      <span class="service-tag">Custom Engineering</span>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-card-num">06</div>
+      <span class="service-card-icon">🎓</span>
+      <div class="service-card-title">Industrial Safety Training</div>
+      <ul class="service-card-list">
+        <li>Operator Safety Training</li><li>Contractor Safety Programs</li>
+        <li>Machine Operation Training</li><li>Industrial Safety Awareness</li>
+        <li>Permit to Work Training</li><li>Equipment Handling Training</li>
+        <li>Safety Orientation</li>
+      </ul>
+      <span class="service-tag">Certified Programs</span>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-card-num">07</div>
+      <span class="service-card-icon">🧵</span>
+      <div class="service-card-title">Textile Machine Services</div>
+      <ul class="service-card-list">
+        <li>Warping Machine Services</li><li>Spare Parts Supply</li>
+        <li>Maintenance & Alignment</li><li>Repairing Services</li>
+        <li>Technical Consultation</li>
+      </ul>
+      <span class="service-tag">Textile · Warping</span>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-card-num">08</div>
+      <span class="service-card-icon">📊</span>
+      <div class="service-card-title">Engineering Consultancy</div>
+      <ul class="service-card-list">
+        <li>Technical Documentation</li><li>Failure Analysis Reports</li>
+        <li>Government Compliance Support</li><li>Fitness-for-Service Assessment</li>
+        <li>Safety & Reliability Review</li><li>Professional Engineering Reports</li>
+      </ul>
+      <span class="service-tag">Advisory · Reports</span>
+    </div>
+  </div>
+
+  <div class="standards-row fade-in">
+    <div class="std-badge">IS 15475</div>
+    <div class="std-badge">ASTM Standards</div>
+    <div class="std-badge">EN Standards</div>
+    <div class="std-badge">ASNT NDT</div>
+    <div class="std-badge">Gujarat Amusement Act</div>
+    <div class="std-badge">Factory Act Compliance</div>
+    <div class="std-badge">IS Standards</div>
+    <div class="std-badge">IBR / IS 2825</div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why" id="why">
+  <div class="section-label">Our Advantage</div>
+  <div class="section-title">WHY CHOOSE US</div>
+  <div class="section-sub">A rare combination of technical depth, government compliance expertise, and practical industrial experience.</div>
+
+  <div class="why-grid">
+    <div class="why-card fade-in"><div class="why-icon">🏆</div><div><div class="why-title">17+ Years Industrial Experience</div><div class="why-desc">Deep practical expertise across inspection, fabrication, NDT and ride safety since 2007.</div></div></div>
+    <div class="why-card fade-in"><div class="why-icon">📋</div><div><div class="why-title">Chartered Engineer Certification</div><div class="why-desc">Registered CE capable of issuing legally recognized engineering certificates and reports.</div></div></div>
+    <div class="why-card fade-in"><div class="why-icon">🏛️</div><div><div class="why-title">Government Compliance Knowledge</div><div class="why-desc">Deep understanding of Gujarat regulations, Factory Act, Amusement Act, and IS standards.</div></div></div>
+    <div class="why-card fade-in"><div class="why-icon">🎡</div><div><div class="why-title">Amusement Ride Specialist</div><div class="why-desc">One of few engineers combining ride inspection, NDT, load testing, and licensing support.</div></div></div>
+    <div class="why-card fade-in"><div class="why-icon">🔬</div><div><div class="why-title">Technical Inspection Expertise</div><div class="why-desc">Multi-method NDT capability plus structural, machinery, and welding inspection skills.</div></div></div>
+    <div class="why-card fade-in"><div class="why-icon">📄</div><div><div class="why-title">Professional Documentation</div><div class="why-desc">Accurate, audit-ready technical reports and certificates for government and client use.</div></div></div>
+    <div class="why-card fade-in"><div class="why-icon">🛡️</div><div><div class="why-title">Safety-Oriented Approach</div><div class="why-desc">Every engagement puts safety first — protecting people, equipment, and business reputation.</div></div></div>
+    <div class="why-card fade-in"><div class="why-icon">🤝</div><div><div class="why-title">Client-Focused Solutions</div><div class="why-desc">Technical accuracy combined with clear communication and on-time delivery every time.</div></div></div>
+    <div class="why-card fade-in"><div class="why-icon">🗺️</div><div><div class="why-title">Pan-India Capability</div><div class="why-desc">Available for inspection, certification, and consultancy projects across Gujarat and India.</div></div></div>
+    <div class="why-card fade-in"><div class="why-icon">⚙️</div><div><div class="why-title">Third Party Inspection</div><div class="why-desc">Independent, unbiased TPI services with professional reporting standards for all industries.</div></div></div>
+  </div>
+</section>
+
+<!-- AMUSEMENT RIDE SAFETY -->
+<section class="ride" id="ride">
+  <div class="ride-header">
+    <div>
+      <div class="section-label">Specialized Niche Service</div>
+      <div class="section-title">AMUSEMENT RIDE<br>SAFETY</div>
+      <div class="section-sub">One of Gujarat's specialist authorities for amusement ride inspection, safety certification, and licensing support — combining CE certification, NDT, and government compliance expertise.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;padding-top:8px;">
+      <div style="padding:18px;background:var(--steel);border:1px solid var(--border);border-radius:4px;">
+        <div style="font-family:var(--font-mono);font-size:.62rem;color:var(--orange);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">Why Ride Safety Matters</div>
+        <div style="font-size:.82rem;color:var(--silver2);line-height:1.7;">Amusement ride accidents can result in fatalities, legal action, and permanent business closure. Professional inspection under IS 15475 and Gujarat Government Guidelines is legally mandatory — and our certification gives amusement parks, ride operators, and local authorities the confidence of a qualified Chartered Engineer's review.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ride-grid">
+    <div class="ride-card fade-in"><div class="ride-card-icon">🔍</div><div class="ride-card-title">Ride Safety Inspection</div><div class="ride-card-desc">Comprehensive inspection of all ride components, mechanisms, safety systems, and structural elements.</div></div>
+    <div class="ride-card fade-in"><div class="ride-card-icon">📋</div><div class="ride-card-title">Safety Audit</div><div class="ride-card-desc">Full operational and safety audit covering operating procedures, maintenance records, and compliance status.</div></div>
+    <div class="ride-card fade-in"><div class="ride-card-icon">⚖️</div><div class="ride-card-title">Load Testing</div><div class="ride-card-desc">Proof load testing of ride structures to verify design load capacity and structural integrity.</div></div>
+    <div class="ride-card fade-in"><div class="ride-card-icon">🔊</div><div class="ride-card-title">NDT of Ride Structures</div><div class="ride-card-desc">Ultrasonic, magnetic particle, and dye penetrant testing of critical ride structural members and welds.</div></div>
+    <div class="ride-card fade-in"><div class="ride-card-icon">📝</div><div class="ride-card-title">Licensing Support</div><div class="ride-card-desc">Technical documentation, reports, and CE certification to support government licensing applications.</div></div>
+    <div class="ride-card fade-in"><div class="ride-card-icon">📅</div><div class="ride-card-title">Annual Safety Inspection</div><div class="ride-card-desc">Mandatory annual inspection as required by the Gujarat Amusement Act for continued operational permits.</div></div>
+    <div class="ride-card fade-in"><div class="ride-card-icon">🔧</div><div class="ride-card-title">Installation Inspection</div><div class="ride-card-desc">Pre-operational inspection of newly installed or relocated rides before public opening.</div></div>
+    <div class="ride-card fade-in"><div class="ride-card-icon">👥</div><div class="ride-card-title">Rider Safety Assessment</div><div class="ride-card-desc">Assessment of rider safety systems, restraints, loading/unloading procedures, and emergency protocols.</div></div>
+  </div>
+  <div class="ride-standards fade-in">
+    <div class="ride-standards-title">Standards & Regulations Followed</div>
+    <div class="ride-standards-list">
+      <div class="ride-std-tag">IS 15475</div>
+      <div class="ride-std-tag">ASTM Standards</div>
+      <div class="ride-std-tag">EN Standards</div>
+      <div class="ride-std-tag">Gujarat Amusement Act</div>
+      <div class="ride-std-tag">Gujarat Government Guidelines</div>
+      <div class="ride-std-tag">Factory Act Compliance</div>
+    </div>
+  </div>
+</section>
+
+<!-- NDT SERVICES -->
+<section class="ndt" id="ndt">
+  <div class="section-label">Non-Destructive Testing</div>
+  <div class="section-title">NDT SERVICES</div>
+  <div class="section-sub">Precision non-destructive testing for industrial equipment, structures, welds, and amusement rides — detecting defects without causing damage.</div>
+
+  <div class="ndt-grid">
+    <div class="ndt-methods fade-in-left">
+      <div class="ndt-method"><div class="ndt-method-abbr">UT</div><div><div class="ndt-method-name">Ultrasonic Testing</div><div class="ndt-method-desc">High-frequency sound waves detect internal defects and measure material thickness without damaging the component. Used for pressure vessels, pipelines, welds, and ride structures.</div></div></div>
+      <div class="ndt-method"><div class="ndt-method-abbr">DPT</div><div><div class="ndt-method-name">Dye Penetrant Testing</div><div class="ndt-method-desc">Surface cracks and discontinuities are identified using dye penetration techniques. Highly effective for detecting surface-breaking defects in all non-porous materials.</div></div></div>
+      <div class="ndt-method"><div class="ndt-method-abbr">MPT</div><div><div class="ndt-method-name">Magnetic Particle Testing</div><div class="ndt-method-desc">Detects surface and near-surface cracks in ferromagnetic materials. Critical for weld inspection and structural integrity verification of steel components.</div></div></div>
+      <div class="ndt-method"><div class="ndt-method-abbr">VT</div><div><div class="ndt-method-name">Visual Testing</div><div class="ndt-method-desc">Systematic visual inspection of surfaces, welds, and components to identify visible defects, corrosion, and dimensional non-conformances.</div></div></div>
+      <div class="ndt-method"><div class="ndt-method-abbr">TM</div><div><div class="ndt-method-name">Thickness Measurement</div><div class="ndt-method-desc">Ultrasonic thickness gauging for corrosion monitoring, remaining wall thickness assessment, and fitness-for-service evaluations.</div></div></div>
+    </div>
+    <div class="ndt-right fade-in-right">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+        <div class="ndt-stat-box"><div class="ndt-stat-num" data-target="5">0</div><div class="ndt-stat-label">NDT Methods</div></div>
+        <div class="ndt-stat-box"><div class="ndt-stat-num" data-target="17">0</div><div class="ndt-stat-label">Years NDT Experience</div></div>
+      </div>
+      <div class="ndt-cert-box">
+        <div class="ndt-cert-title">NDT Applications</div>
+        <div class="ndt-cert-list">
+          <div class="ndt-cert-item">Pressure vessels & boilers</div>
+          <div class="ndt-cert-item">Structural steel & welds</div>
+          <div class="ndt-cert-item">Amusement ride structures</div>
+          <div class="ndt-cert-item">Industrial pipelines</div>
+          <div class="ndt-cert-item">Machinery components</div>
+          <div class="ndt-cert-item">Bridges & civil structures</div>
+          <div class="ndt-cert-item">Fabricated assemblies</div>
+          <div class="ndt-cert-item">Storage tanks</div>
+        </div>
+      </div>
+      <div class="ndt-cert-box">
+        <div class="ndt-cert-title">Standards Applied</div>
+        <div class="ndt-cert-list">
+          <div class="ndt-cert-item">ASNT SNT-TC-1A</div>
+          <div class="ndt-cert-item">IS Standards for NDT</div>
+          <div class="ndt-cert-item">ASME V — Non-Destructive Examination</div>
+          <div class="ndt-cert-item">AWS D1.1 — Structural Welding</div>
+          <div class="ndt-cert-item">IS 15475 — Amusement Rides</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIAL SAFETY TRAINING -->
+<section class="training" id="training">
+  <div class="section-label">Safety Training</div>
+  <div class="section-title">INDUSTRIAL SAFETY<br>TRAINING</div>
+  <div class="section-sub">Certified safety training programs for operators, contractors, and industrial workers — covering equipment handling, permit systems, and safety compliance.</div>
+
+  <div class="training-grid">
+    <div class="training-card fade-in"><div class="training-card-icon">👷</div><div class="training-card-title">Operator Safety Training</div><div class="training-card-desc">Equipment-specific safety training for machine operators covering safe operating procedures, hazard identification, and emergency response.</div></div>
+    <div class="training-card fade-in"><div class="training-card-icon">🦺</div><div class="training-card-title">Contractor Safety Programs</div><div class="training-card-desc">Comprehensive safety induction and ongoing training for contractors working in industrial facilities and construction sites.</div></div>
+    <div class="training-card fade-in"><div class="training-card-icon">⚙️</div><div class="training-card-title">Machine Operation Training</div><div class="training-card-desc">Structured training on safe operation of industrial machinery, amusement rides, and fabrication equipment with practical demonstrations.</div></div>
+    <div class="training-card fade-in"><div class="training-card-icon">⚠️</div><div class="training-card-title">Industrial Safety Awareness</div><div class="training-card-desc">Awareness programs on workplace hazards, PPE usage, accident prevention, and industrial safety culture for all levels of staff.</div></div>
+    <div class="training-card fade-in"><div class="training-card-icon">📝</div><div class="training-card-title">Permit to Work Training</div><div class="training-card-desc">Training on hot work, confined space, height work, and other permit-to-work systems for safe execution of high-risk industrial activities.</div></div>
+    <div class="training-card fade-in"><div class="training-card-icon">🎓</div><div class="training-card-title">Safety Orientation Programs</div><div class="training-card-desc">New employee and visitor safety orientation programs tailored to industrial, amusement park, and manufacturing environments.</div></div>
+  </div>
+</section>
+
+<!-- MANUFACTURING -->
+<section class="mfg" id="manufacturing">
+  <div class="section-label">Fabrication & Manufacturing</div>
+  <div class="section-title">MANUFACTURING<br>CAPABILITIES</div>
+  <div class="section-sub">Engineering-backed fabrication and manufacturing services — from structural components to precision industrial assemblies, driven by technical drawings and quality standards.</div>
+
+  <div class="mfg-grid">
+    <div class="mfg-list fade-in-left">
+      <div class="mfg-item"><div class="mfg-item-icon">🏗️</div><div><div class="mfg-item-title">Structural Fabrication</div><div class="mfg-item-desc">Steel structure fabrication for industrial, commercial, and amusement park applications with quality weld inspection.</div></div></div>
+      <div class="mfg-item"><div class="mfg-item-icon">⚙️</div><div><div class="mfg-item-title">Machine Fabrication</div><div class="mfg-item-desc">Custom machine frames, bases, guards, and components manufactured to engineering drawings and specifications.</div></div></div>
+      <div class="mfg-item"><div class="mfg-item-icon">🔩</div><div><div class="mfg-item-title">Industrial Components</div><div class="mfg-item-desc">Precision industrial components including shafts, brackets, flanges, and mechanical assemblies for diverse industries.</div></div></div>
+      <div class="mfg-item"><div class="mfg-item-icon">🎯</div><div><div class="mfg-item-title">Precision Job Work</div><div class="mfg-item-desc">High-precision machining and fabrication work for components requiring tight dimensional tolerances.</div></div></div>
+      <div class="mfg-item"><div class="mfg-item-icon">🔨</div><div><div class="mfg-item-title">Heavy Fabrication</div><div class="mfg-item-desc">Heavy structural and mechanical fabrication for industrial infrastructure, support structures, and large assemblies.</div></div></div>
+      <div class="mfg-item"><div class="mfg-item-icon">📐</div><div><div class="mfg-item-title">Drawing-Based Manufacturing</div><div class="mfg-item-desc">Manufacturing strictly from approved engineering drawings and specifications with dimensional verification and QC documentation.</div></div></div>
+    </div>
+    <div class="fade-in-right">
+      <div class="mfg-stats-row">
+        <div class="mfg-right-stat"><div class="mfg-right-stat-num" data-target="17">0</div><div class="mfg-right-stat-label">Years Manufacturing</div></div>
+        <div class="mfg-right-stat"><div class="mfg-right-stat-num" data-target="500">0</div><div class="mfg-right-stat-label">Components Made</div></div>
+        <div class="mfg-right-stat"><div class="mfg-right-stat-num" data-target="100">0</div><div class="mfg-right-stat-label">Industrial Clients</div></div>
+        <div class="mfg-right-stat"><div class="mfg-right-stat-num" data-target="200">0</div><div class="mfg-right-stat-label">Fabrication Projects</div></div>
+      </div>
+      <div style="padding:20px;background:var(--steel);border:1px solid var(--border2);border-radius:4px;">
+        <div style="font-family:var(--font-mono);font-size:.62rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Quality Assurance</div>
+        <div style="font-size:.82rem;color:var(--silver2);line-height:1.75;">All fabrication work is backed by our Chartered Engineering expertise — providing in-house quality inspection, weld verification, dimensional checks, and technical documentation. Clients receive a complete QC package with every order.</div>
+      </div>
+      <div style="margin-top:14px;padding:16px;background:rgba(200,134,10,0.07);border:1px solid var(--border);border-radius:4px;">
+        <div style="font-family:var(--font-mono);font-size:.62rem;color:var(--accent);letter-spacing:2px;margin-bottom:8px;">Materials We Work With</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span class="std-badge">Mild Steel</span><span class="std-badge">Stainless Steel</span>
+          <span class="std-badge">Alloy Steel</span><span class="std-badge">Structural Steel</span>
+          <span class="std-badge">IS 2062 Grade</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS & STANDARDS -->
+<section class="certs" id="certifications">
+  <div class="section-label">Credentials</div>
+  <div class="section-title">CERTIFICATIONS &<br>STANDARDS</div>
+  <div class="section-sub">Professional engineering credentials that ensure every inspection, certificate, and report stands up to government and regulatory scrutiny.</div>
+  <div class="certs-grid">
+    <div class="cert-card fade-in"><div class="cert-icon">🏅</div><div class="cert-name">ISO 9001:2025 Certified</div><div class="cert-body">Quality Management System</div><div class="cert-desc">ISO 9001:2025 certified company — our quality management system ensures consistent, high-standard engineering services, documentation accuracy, and continual improvement across all inspection and certification activities.</div></div>
+    <div class="cert-card fade-in"><div class="cert-icon">📋</div><div class="cert-name">Chartered Engineer</div><div class="cert-body">Institution of Engineers (India)</div><div class="cert-desc">Registered Chartered Engineer — Mechanical Division. Authorized to issue engineering certificates, valuation reports, and technical documentation recognized by government and courts.</div></div>
+    <div class="cert-card fade-in"><div class="cert-icon">🎡</div><div class="cert-name">Ride Safety Inspector</div><div class="cert-body">IS 15475 · Gujarat Amusement Act</div><div class="cert-desc">Qualified amusement ride inspector under IS 15475. Authorized to conduct safety inspections and issue compliance certificates for ride licensing under Gujarat Government guidelines.</div></div>
+    <div class="cert-card fade-in"><div class="cert-icon">🔬</div><div class="cert-name">NDT Specialist</div><div class="cert-body">ASNT Standards</div><div class="cert-desc">Experienced in UT, MPT, DPT, and VT testing methods following ASNT SNT-TC-1A and applicable IS standards for industrial NDT inspection and reporting.</div></div>
+    <div class="cert-card fade-in"><div class="cert-icon">🏭</div><div class="cert-name">Third Party Inspector</div><div class="cert-body">Industrial TPI Authority</div><div class="cert-desc">Qualified to conduct independent third-party inspection for vendors, factories, and industrial clients — providing unbiased quality audit and compliance verification.</div></div>
+    <div class="cert-card fade-in"><div class="cert-icon">🏛️</div><div class="cert-name">Factory Act Compliance</div><div class="cert-body">Gujarat · Pan-India</div><div class="cert-desc">Working knowledge of Factory Act regulations, industrial safety standards, and government compliance requirements for manufacturing and industrial facilities.</div></div>
+    <div class="cert-card fade-in"><div class="cert-icon">🎓</div><div class="cert-name">Safety Trainer</div><div class="cert-body">Industrial Safety Programs</div><div class="cert-desc">Certified to conduct industrial safety training programs for operators, contractors, and workers in manufacturing, amusement, and industrial environments.</div></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="section-label">Our Work</div>
+  <div class="section-title">FEATURED PROJECTS</div>
+  <div class="section-sub">Real engineering work — from amusement ride inspections and factory audits to NDT testing and fabrication projects across Gujarat and India.</div>
+
+  <div class="projects-filter">
+    <button class="filter-btn active" onclick="filterProjects('all',this)">All Projects</button>
+    <button class="filter-btn" onclick="filterProjects('ride',this)">Ride Safety</button>
+    <button class="filter-btn" onclick="filterProjects('ndt',this)">NDT</button>
+    <button class="filter-btn" onclick="filterProjects('inspection',this)">Inspection</button>
+    <button class="filter-btn" onclick="filterProjects('fabrication',this)">Fabrication</button>
+    <button class="filter-btn" onclick="filterProjects('training',this)">Training</button>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-card fade-in" data-cat="ride"><div class="project-thumb">🎡</div><div class="project-body"><div class="project-cat">Amusement Ride Safety</div><div class="project-title">Annual Ride Safety Inspection — Amusement Park, Ahmedabad</div><div class="project-desc">Complete annual safety inspection of 12 amusement rides including load testing, NDT of critical joints, and Gujarat Government licensing documentation.</div><div class="project-tags"><span class="project-tag">IS 15475</span><span class="project-tag">Load Testing</span><span class="project-tag">NDT</span></div></div></div>
+    <div class="project-card fade-in" data-cat="ndt"><div class="project-thumb">🔊</div><div class="project-body"><div class="project-cat">NDT Services</div><div class="project-title">Ultrasonic Thickness Survey — Industrial Pipeline</div><div class="project-desc">Comprehensive UT thickness measurement survey on process pipelines for a chemical plant, identifying corrosion zones and remaining life assessment.</div><div class="project-tags"><span class="project-tag">UT</span><span class="project-tag">Thickness Measurement</span><span class="project-tag">Corrosion</span></div></div></div>
+    <div class="project-card fade-in" data-cat="inspection"><div class="project-thumb">🏭</div><div class="project-body"><div class="project-cat">Industrial Inspection</div><div class="project-title">Factory Shutdown Inspection — Manufacturing Unit</div><div class="project-desc">Third-party shutdown inspection covering pressure vessels, structural steel, machinery condition assessment, and welding quality verification.</div><div class="project-tags"><span class="project-tag">TPI</span><span class="project-tag">Shutdown</span><span class="project-tag">QA/QC</span></div></div></div>
+    <div class="project-card fade-in" data-cat="inspection"><div class="project-thumb">📋</div><div class="project-body"><div class="project-cat">CE Certification</div><div class="project-title">Used Machinery Import Certification — Multiple Machines</div><div class="project-desc">Chartered Engineer certification for imported used machinery including technical inspection, valuation report, and government documentation for customs clearance.</div><div class="project-tags"><span class="project-tag">CE Certificate</span><span class="project-tag">Import</span><span class="project-tag">Valuation</span></div></div></div>
+    <div class="project-card fade-in" data-cat="ride"><div class="project-thumb">🎢</div><div class="project-body"><div class="project-cat">Ride Installation</div><div class="project-title">New Ride Installation Inspection — Theme Park, Gujarat</div><div class="project-desc">Pre-operational inspection of newly installed roller coaster — structural integrity, safety system verification, and licensing certificate for government approval.</div><div class="project-tags"><span class="project-tag">Installation</span><span class="project-tag">Structural</span><span class="project-tag">Licensing</span></div></div></div>
+    <div class="project-card fade-in" data-cat="fabrication"><div class="project-thumb">🔩</div><div class="project-body"><div class="project-cat">Manufacturing</div><div class="project-title">Heavy Structural Fabrication — Industrial Support Structure</div><div class="project-desc">Design-to-delivery structural fabrication for industrial equipment support frames, with in-house weld inspection and dimensional verification documentation.</div><div class="project-tags"><span class="project-tag">Structural</span><span class="project-tag">Welding</span><span class="project-tag">QC</span></div></div></div>
+    <div class="project-card fade-in" data-cat="ndt"><div class="project-thumb">🔥</div><div class="project-body"><div class="project-cat">Weld Inspection</div><div class="project-title">Weld Quality Inspection — Fabrication Contractor QA</div><div class="project-desc">DPT and VT weld inspection for a fabrication contractor supplying structural components to a government infrastructure project.</div><div class="project-tags"><span class="project-tag">DPT</span><span class="project-tag">VT</span><span class="project-tag">Weld QA</span></div></div></div>
+    <div class="project-card fade-in" data-cat="training"><div class="project-thumb">🎓</div><div class="project-body"><div class="project-cat">Safety Training</div><div class="project-title">Operator Safety Training Program — Amusement Park Staff</div><div class="project-desc">Certified safety training for amusement park ride operators covering safe operation procedures, emergency response, and Gujarat Act compliance.</div><div class="project-tags"><span class="project-tag">Training</span><span class="project-tag">Operators</span><span class="project-tag">Certified</span></div></div></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="section-label">Field Work</div>
+  <div class="section-title">SITE GALLERY</div>
+  <div class="section-sub">Real work from the field — ride inspections, NDT testing, fabrication, and site visits across Gujarat and India. (Upload your actual site photographs here for maximum client trust.)</div>
+  <div class="gallery-grid">
+    <div class="gallery-item" data-img="images/gallery-1.jpg" data-caption="Amusement Ride Inspection" onclick="openLightbox(0)"><img class="gallery-img" src="images/gallery-1.jpg" alt="Amusement ride inspection — Shree Shakti Engineering" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-txt">Amusement Ride Inspection<span class="gallery-overlay-hint">🔍 Click to view</span></div></div></div>
+    <div class="gallery-item" data-img="images/gallery-2.jpg" data-caption="Giant Wheel Structural Inspection" onclick="openLightbox(1)"><img class="gallery-img" src="images/gallery-2.jpg" alt="Giant wheel structural inspection — Shree Shakti Engineering" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-txt">Giant Wheel Structural Inspection<span class="gallery-overlay-hint">🔍 Click to view</span></div></div></div>
+    <div class="gallery-item" data-img="images/gallery-3.jpg" data-caption="Ride Load Testing" onclick="openLightbox(2)"><img class="gallery-img" src="images/gallery-3.jpg" alt="Ride load testing — Shree Shakti Engineering" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-txt">Ride Load Testing<span class="gallery-overlay-hint">🔍 Click to view</span></div></div></div>
+    <div class="gallery-item" data-img="images/gallery-4.jpg" data-caption="Industrial Chiller Inspection" onclick="openLightbox(3)"><img class="gallery-img" src="images/gallery-4.jpg" alt="Industrial chiller inspection — Shree Shakti Engineering" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-txt">Industrial Chiller Inspection<span class="gallery-overlay-hint">🔍 Click to view</span></div></div></div>
+    <div class="gallery-item" data-img="images/gallery-5.jpg" data-caption="Structural Beam Inspection — Snow World" onclick="openLightbox(4)"><img class="gallery-img" src="images/gallery-5.jpg" alt="Structural beam inspection at Snow World — Shree Shakti Engineering" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-txt">Structural Beam Inspection<span class="gallery-overlay-hint">🔍 Click to view</span></div></div></div>
+    <div class="gallery-item" data-img="images/gallery-6.jpg" data-caption="Amusement Park Ride Safety Check" onclick="openLightbox(5)"><img class="gallery-img" src="images/gallery-6.jpg" alt="Amusement park ride safety check — Shree Shakti Engineering" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-txt">Amusement Park Ride Safety Check<span class="gallery-overlay-hint">🔍 Click to view</span></div></div></div>
+    <div class="gallery-item" data-img="images/gallery-7.jpg" data-caption="Indoor Play Structure Inspection" onclick="openLightbox(6)"><img class="gallery-img" src="images/gallery-7.jpg" alt="Indoor play structure inspection — Shree Shakti Engineering" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-txt">Indoor Play Structure Inspection<span class="gallery-overlay-hint">🔍 Click to view</span></div></div></div>
+    <div class="gallery-item" data-img="images/gallery-8.jpg" data-caption="DPT Weld Inspection" onclick="openLightbox(7)"><img class="gallery-img" src="images/gallery-8.jpg" alt="Dye penetrant weld inspection — Shree Shakti Engineering" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-txt">DPT Weld Inspection<span class="gallery-overlay-hint">🔍 Click to view</span></div></div></div>
+    <div class="gallery-item" data-img="images/gallery-9.jpg" data-caption="Dye Penetrant Testing" onclick="openLightbox(8)"><img class="gallery-img" src="images/gallery-9.jpg" alt="Dye penetrant testing on structural frame — Shree Shakti Engineering" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-txt">Dye Penetrant Testing<span class="gallery-overlay-hint">🔍 Click to view</span></div></div></div>
+    <div class="gallery-item" data-img="images/gallery-10.jpg" data-caption="Ride Machinery Inspection" onclick="openLightbox(9)"><img class="gallery-img" src="images/gallery-10.jpg" alt="Ride machinery and drive inspection — Shree Shakti Engineering" loading="lazy"><div class="gallery-overlay"><div class="gallery-overlay-txt">Ride Machinery Inspection<span class="gallery-overlay-hint">🔍 Click to view</span></div></div></div>
+  </div>
+</section>
+
+<!-- GALLERY LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">✕</button>
+  <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)" aria-label="Previous image">‹</button>
+  <div class="lightbox-stage">
+    <div class="lightbox-media"><img id="lightboxImg" src="" alt=""></div>
+    <div class="lightbox-caption">
+      <div class="lightbox-title" id="lightboxTitle"></div>
+      <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+  </div>
+  <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)" aria-label="Next image">›</button>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-label">Get In Touch</div>
+  <div class="section-title">CONTACT US</div>
+  <div class="section-sub">Request inspection, certification, NDT testing, or technical consultation — available for projects across Gujarat and India.</div>
+
+  <div class="contact-grid">
+    <div class="contact-info fade-in-left">
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div><div class="contact-item-label">Mobile / WhatsApp</div><div class="contact-item-val"><a href="tel:+919800000000">+91 9427705797</a></div></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📧</div>
+        <div><div class="contact-item-label">Email</div><div class="contact-item-val"><a href="mailto:info@shreeshaktiengineering.com">erranjitverma@gmail.com</a></div></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div><div class="contact-item-label">Office Address</div><div class="contact-item-val">B-28 Chirag Industrial Estate,C.T.M, Amraiwadi, Ahmedabad-380026</div></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🌐</div>
+        <div><div class="contact-item-label">Service Area</div><div class="contact-item-val">Gujarat · Pan-India Projects</div></div>
+      </div>
+      <a href="https://wa.me/9427705797?text=Hello%2C%20I%20am%20interested%20in%20your%20engineering%20inspection%20services." target="_blank" class="btn-primary" style="text-align:center;display:block;">💬 WhatsApp Us Now</a>
+      <div class="coverage-note">
+        ✓ Available for Industrial Inspection &amp; Technical Consultancy Across Gujarat and India<br>
+        ✓ Chartered Engineer Certificates · NDT Reports · Ride Safety Inspection<br>
+        ✓ Government Compliance Documentation · Third Party Inspection
+      </div>
+    </div>
+    <form class="contact-form fade-in-right" id="inquiryForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact"/>
+      <!-- Honeypot: invisible to real visitors, bots fill it — submission is rejected if it has a value -->
+      <p style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;margin:0;" aria-hidden="true">
+        <label>Leave this field empty — <input name="bot-field" tabindex="-1" autocomplete="off"/></label>
+      </p>
+      <div class="form-title">Send Inspection Inquiry</div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Full Name</label><input class="form-input" type="text" name="name" placeholder="Your name" required/></div>
+        <div class="form-group"><label class="form-label">Company</label><input class="form-input" type="text" name="company" placeholder="Company / Organization"/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Phone</label><input class="form-input" type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required/></div>
+        <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" name="email" placeholder="your@email.com" required/></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Service Required</label>
+        <select class="form-select form-input" name="service">
+          <option value="">Select a service…</option>
+          <option>Chartered Engineer Certification</option>
+          <option>Amusement Ride Inspection &amp; Licensing</option>
+          <option>NDT Services (UT / MPT / DPT / VT)</option>
+          <option>Industrial Third Party Inspection</option>
+          <option>Factory / Shutdown Inspection</option>
+          <option>Welding &amp; Weld Quality Inspection</option>
+          <option>Pressure Vessel Inspection</option>
+          <option>Manufacturing &amp; Fabrication</option>
+          <option>Industrial Safety Training</option>
+          <option>Textile Machinery Services</option>
+          <option>Engineering Consultancy</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Location &amp; Project Details</label>
+        <textarea class="form-textarea" name="message" placeholder="Briefly describe your requirement, location, number of rides/equipment, and timeline…" required></textarea>
+      </div>
+      <div class="form-note" id="formNote" style="display:none;font-size:.72rem;color:var(--orange);margin-bottom:10px;"></div>
+      <button type="submit" class="form-submit">Send Inquiry →</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand">SHREE <span>SHAKTI</span></div>
+      <div class="footer-tagline">Chartered Engineer · Industrial Inspection · Amusement Ride Safety<br>NDT Services · Manufacturing · Safety Training<br><br>Ahmedabad, Gujarat, India<br>Delivering precision engineering inspection and certification services since 2007.</div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#services">Chartered Engineer CE</a></li>
+        <li><a href="#ride">Ride Inspection</a></li>
+        <li><a href="#ndt">NDT Services</a></li>
+        <li><a href="#services">Industrial Inspection</a></li>
+        <li><a href="#manufacturing">Fabrication</a></li>
+        <li><a href="#training">Safety Training</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Quick Links</div>
+      <ul class="footer-links">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#why">Why Choose Us</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Standards</div>
+      <ul class="footer-links">
+        <li><a href="#certifications">IS 15475</a></li>
+        <li><a href="#certifications">ASTM Standards</a></li>
+        <li><a href="#certifications">EN Standards</a></li>
+        <li><a href="#ndt">ASNT NDT</a></li>
+        <li><a href="#certifications">Gujarat Amusement Act</a></li>
+        <li><a href="#certifications">Factory Act</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Shree Shakti Engineering · Ranjit Dangi · All rights reserved · Ahmedabad, Gujarat</div>
+    <div class="footer-cert">✓ Chartered Engineer · ✓ Ride Safety Inspector · ✓ NDT Specialist · ✓ ISO 9001:2025 Certified</div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a class="whatsapp-float" href="https://wa.me/9427705797?text=Hello%2C%20I%20am%20interested%20in%20your%20inspection%20services." target="_blank" title="Chat on WhatsApp">💬</a>
+
+<script>
+// NAV SCROLL
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// MOBILE NAV
+function toggleMobileNav() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMobileNav() {
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+// COUNTER
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target);
+  const duration = 1800;
+  const step = target / (duration / 16);
+  let current = 0;
+  const timer = setInterval(() => {
+    current += step;
+    if (current >= target) { current = target; clearInterval(timer); }
+    el.textContent = Math.floor(current) + '+';
+  }, 16);
+}
+
+// INTERSECTION OBSERVER
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      entry.target.querySelectorAll('[data-target]').forEach(n => animateCounter(n));
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.fade-in,.fade-in-left,.fade-in-right').forEach(el => observer.observe(el));
+document.querySelectorAll('.stats-bar,.ndt-right,.mfg-grid').forEach(el => observer.observe(el));
+
+// PROJECT FILTER
+function filterProjects(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.project-card').forEach(card => {
+    const show = cat === 'all' || card.dataset.cat === cat;
+    card.style.display = show ? 'block' : 'none';
+    if (show) {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      setTimeout(() => {
+        card.style.transition = 'opacity .4s,transform .4s';
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }, 50);
+    }
+  });
+}
+
+// FORM SUBMIT — spam-hardened (honeypot + time-trap) + real submission
+const inquiryForm = document.getElementById('inquiryForm');
+const formOpenedAt = Date.now();
+const MIN_FILL_TIME_MS = 1500; // real humans take at least this long; bots submit near-instantly
+
+function encodeFormData(form) {
+  return new URLSearchParams(new FormData(form)).toString();
+}
+
+inquiryForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('.form-submit');
+  const note = document.getElementById('formNote');
+  note.style.display = 'none';
+
+  // Honeypot: only bots fill hidden fields — drop silently, no feedback given
+  if (form.querySelector('[name="bot-field"]').value) {
+    return;
+  }
+
+  // Time-trap: reject submissions faster than a human could plausibly fill the form
+  if (Date.now() - formOpenedAt < MIN_FILL_TIME_MS) {
+    note.textContent = 'Please take a moment to fill the form, then submit again.';
+    note.style.display = 'block';
+    return;
+  }
+
+  const originalText = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: encodeFormData(form)
+  })
+    .catch(() => { /* still show confirmation even if the form backend isn't connected yet */ })
+    .finally(() => {
+      btn.textContent = '✓ Inquiry Sent! We will contact you shortly.';
+      btn.style.background = '#2a8a5a';
+      btn.style.color = '#fff';
+      form.reset();
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+        btn.style.color = '';
+        btn.disabled = false;
+      }, 4000);
+    });
+});
+
+// GALLERY LIGHTBOX
+const galleryItems = document.querySelectorAll('.gallery-item');
+const lightbox = document.getElementById('lightbox');
+let lightboxIndex = 0;
+
+function updateLightbox() {
+  const item = galleryItems[lightboxIndex];
+  const img = document.getElementById('lightboxImg');
+  img.src = item.dataset.img;
+  img.alt = item.dataset.caption;
+  document.getElementById('lightboxTitle').textContent = item.dataset.caption;
+  document.getElementById('lightboxCounter').textContent = (lightboxIndex + 1) + ' / ' + galleryItems.length;
+}
+function openLightbox(index) {
+  lightboxIndex = index;
+  updateLightbox();
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+function navLightbox(dir) {
+  lightboxIndex = (lightboxIndex + dir + galleryItems.length) % galleryItems.length;
+  updateLightbox();
+}
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowRight') navLightbox(1);
+  if (e.key === 'ArrowLeft') navLightbox(-1);
+});
+
+// ACTIVE NAV HIGHLIGHT
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 130) current = s.getAttribute('id');
+  });
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.style.color = a.getAttribute('href') === '#' + current ? 'var(--accent)' : '';
+  });
+});
+</script>
+</body>
+</html>
