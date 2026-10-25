@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Shree Shakti Engineering — Visiting Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --navy:   #04090f;
+  --navy2:  #071018;
+  --navy3:  #0c1a2e;
+  --steel:  #152238;
+  --steel2: #1e3050;
+  --silver: #7e9ab4;
+  --silver2:#b0c4d4;
+  --white:  #edf2f7;
+  --accent: #c8860a;
+  --accent2:#e8a030;
+  --orange: #e86820;
+  --cyan:   #2d9fcf;
+  --border: rgba(200,134,10,0.35);
+  --border2:rgba(255,255,255,0.09);
+  --font-display:'Bebas Neue',sans-serif;
+  --font-body:'DM Sans',sans-serif;
+  --font-mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  background:#e7ebf0;
+  font-family:var(--font-body);
+  padding:50px 30px;
+  display:flex;flex-direction:column;align-items:center;gap:34px;
+}
+.page-title{
+  font-family:var(--font-mono);font-size:.72rem;color:#3a4a5c;
+  letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;text-align:center;
+}
+.page-sub{
+  font-family:var(--font-body);font-size:.82rem;color:#5a6b7d;
+  text-align:center;max-width:520px;line-height:1.6;margin-bottom:8px;
+}
+.sheet{
+  display:flex;gap:28px;flex-wrap:wrap;justify-content:center;
+}
+.card-wrap{
+  width:calc(90mm * 2.15);height:calc(54mm * 2.15);
+  box-shadow:0 20px 45px rgba(10,20,35,.22);
+  border-radius:3px;
+  position:relative;overflow:hidden;
+}
+.card{
+  width:90mm;height:54mm;
+  position:absolute;top:0;left:0;
+  transform:scale(2.15);
+  transform-origin:top left;
+  overflow:hidden;
+  font-family:var(--font-body);
+}
+
+/* ============ FRONT ============ */
+.front{
+  background:
+    radial-gradient(ellipse 70% 60% at 80% 15%, rgba(45,159,207,0.10) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 60% at 10% 90%, rgba(200,134,10,0.10) 0%, transparent 55%),
+    linear-gradient(155deg, var(--navy) 0%, var(--navy2) 60%, var(--navy3) 100%);
+}
+.front-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(200,134,10,0.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(200,134,10,0.05) 1px,transparent 1px);
+  background-size:6mm 6mm;
+  mask-image:radial-gradient(ellipse at 30% 40%, black 10%, transparent 75%);
+}
+.corner{position:absolute;width:5mm;height:5mm;border-color:var(--accent);border-style:solid;opacity:.85;}
+.corner.tl{top:3mm;left:3mm;border-width:1px 0 0 1px;}
+.corner.br{bottom:3mm;right:3mm;border-width:0 1px 1px 0;}
+
+.front-qr{
+  position:absolute;top:3.2mm;right:3.2mm;z-index:3;
+  display:flex;flex-direction:column;align-items:center;gap:.7mm;
+}
+.front-qr img{
+  width:9.5mm;height:9.5mm;display:block;
+  background:#fff;padding:.7mm;border-radius:.6mm;
+  border:1px solid var(--border);
+}
+.front-qr span{
+  font-family:var(--font-mono);font-size:1.4mm;color:var(--silver);
+  letter-spacing:.6px;text-transform:uppercase;
+}
+
+.front-content{
+  position:relative;z-index:2;height:100%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:6mm;
+}
+.front-logo{
+  width:15mm;height:15mm;border-radius:2mm;
+  background:rgba(255,255,255,0.03);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+  margin-bottom:3mm;
+}
+.front-logo img{width:88%;height:88%;object-fit:contain;}
+.front-name{
+  font-family:var(--font-display);letter-spacing:1.5px;line-height:.95;color:var(--white);
+}
+.front-name .l1{font-size:6.2mm;display:block;}
+.front-name .l2{font-size:6.2mm;display:block;}
+.front-name .l2 .gold{color:var(--accent);}
+.front-name .l2 .oran{color:var(--orange);}
+.front-tag{
+  margin-top:2.4mm;font-family:var(--font-mono);font-size:2.15mm;color:var(--cyan);
+  letter-spacing:.8px;text-transform:uppercase;
+}
+.front-iso{
+  margin-top:3.2mm;display:inline-flex;align-items:center;gap:1.2mm;
+  background:rgba(200,134,10,0.1);border:1px solid var(--border);
+  padding:1.2mm 3mm;border-radius:1mm;
+  font-family:var(--font-mono);font-size:1.9mm;color:var(--accent);
+  letter-spacing:1px;text-transform:uppercase;
+}
+.front-iso::before{content:'✓';font-weight:700;}
+
+/* ============ BACK ============ */
+.back{
+  background:linear-gradient(160deg, var(--navy2) 0%, var(--navy) 100%);
+  padding:4mm 6mm;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.back-eyebrow{
+  font-family:var(--font-mono);font-size:1.85mm;line-height:1.2;color:var(--accent);
+  letter-spacing:1.6px;text-transform:uppercase;margin-bottom:1mm;
+  display:flex;align-items:center;gap:2mm;
+}
+.back-eyebrow::before{content:'';width:4mm;height:1px;background:var(--accent);display:inline-block;}
+.back-name{
+  font-family:var(--font-display);font-size:5.6mm;letter-spacing:1.2px;color:var(--white);line-height:1;
+}
+.back-role{
+  margin-top:1mm;font-family:var(--font-mono);font-size:1.95mm;color:var(--cyan);
+  letter-spacing:.5px;line-height:1.3;
+}
+.back-credbadge{
+  margin-top:1.8mm;display:inline-flex;width:fit-content;
+  background:rgba(200,134,10,0.12);border:1px solid var(--border);
+  padding:.8mm 2.6mm;border-radius:1mm;
+  font-family:var(--font-mono);font-size:1.8mm;line-height:1.2;color:var(--accent2);letter-spacing:.8px;
+}
+.back-contact{display:flex;flex-direction:column;gap:1.2mm;margin-top:2.6mm;}
+.back-row{display:flex;align-items:center;gap:2.2mm;font-size:2.2mm;line-height:1.2;color:var(--silver2);}
+.back-row .ic{
+  width:4.4mm;height:4.4mm;min-width:4.4mm;border-radius:50%;
+  background:rgba(200,134,10,0.1);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;font-size:2.15mm;color:var(--accent);
+}
+
+@media print {
+  body{background:#fff;padding:0;gap:0;}
+  .page-title,.page-sub{display:none;}
+  .card-wrap{width:90mm;height:54mm;box-shadow:none;page-break-inside:avoid;}
+  .card{transform:none;}
+  .sheet{gap:0;}
+}
+
+/* export=front / export=back in the URL renders a single flat, full-bleed
+   card face at true size — used to generate standalone PNG images */
+body.export-mode{background:transparent;padding:0;}
+body.export-mode .page-title,body.export-mode .page-sub{display:none;}
+body.export-mode .sheet{gap:0;}
+body.export-mode .card-wrap{width:90mm;height:54mm;box-shadow:none;border-radius:0;}
+body.export-mode .card{transform:none;}
+</style>
+</head>
+<body>
+
+<div class="page-title">Shree Shakti Engineering — Visiting Card Artwork</div>
+<div class="page-sub">Standard size 90mm × 54mm (front &amp; back). Shown at 2.15× for screen preview — prints at true size. Use browser Print → Save as PDF, or hand this file to your printer.</div>
+
+<div class="sheet">
+  <div class="card-wrap" data-face="front">
+    <div class="card front">
+      <div class="front-grid"></div>
+      <div class="corner tl"></div>
+      <div class="corner br"></div>
+      <div class="front-qr">
+        <img src="images/qr-website.png" alt="QR code linking to shree-shakti-eng.netlify.app"/>
+        <span>Scan to Visit</span>
+      </div>
+      <div class="front-content">
+        <div class="front-logo"><img src="images/logo.png" alt="SSE logo"/></div>
+        <div class="front-name">
+          <span class="l1">SHREE</span>
+          <span class="l2"><span class="gold">SHAKTI</span> <span class="oran">ENGINEERING</span></span>
+        </div>
+        <div class="front-tag">Chartered Engineer · NDT · Ride Safety · Inspection</div>
+        <div class="front-iso">ISO 9001:2015 Certified</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-wrap" data-face="back">
+    <div class="card back">
+      <div class="back-eyebrow">Principal Engineer</div>
+      <div class="back-name">RANJIT DANGI</div>
+      <div class="back-role">Chartered Engineer · NDT Specialist<br>Amusement Ride Safety Inspector</div>
+      <div class="back-credbadge">CE · IEI &nbsp;|&nbsp; 17+ Years Experience</div>
+      <div class="back-contact">
+        <div class="back-row"><span class="ic">📞</span>+91 94277 05797</div>
+        <div class="back-row"><span class="ic">✉</span>erranjitverma@gmail.com</div>
+        <div class="back-row"><span class="ic">🌐</span>shree-shakti-eng.netlify.app</div>
+        <div class="back-row"><span class="ic">📍</span>Ahmedabad, Gujarat · Pan-India</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var face = new URLSearchParams(location.search).get('export');
+  if (!face) return;
+  document.body.classList.add('export-mode');
+  document.querySelectorAll('.card-wrap').forEach(function (w) {
+    if (w.dataset.face !== face) w.remove();
+  });
+})();
+</script>
+
+</body>
+</html>
